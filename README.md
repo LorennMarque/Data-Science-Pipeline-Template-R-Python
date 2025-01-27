@@ -2,7 +2,7 @@
 Esta plantilla proporciona una estructura modular para proyectos de análisis de datos en Python o R. Permite automatizar la importación, limpieza, transformación, visualización y generación de reportes.
 
 ## Estructura de archivos
-` ` ` 
+```
 📁 data_raw               # Datos originales sin procesar
 📁 data_cleaned           # Datos limpios y listos para análisis
 📁 reports                # Reportes y visualizaciones generadas
@@ -16,10 +16,10 @@ Esta plantilla proporciona una estructura modular para proyectos de análisis de
 📚 main_pipeline.py       # Script maestro que ejecuta todo
 📚 README.md              # Documentación del proyecto
 📚 requirements.txt       # Dependencias necesarias
-` ` ` 
+```
 
 ### Ejemplo de archivo en /scripts
-` ` `
+```
 import pandas as pd
 
 def load_data(file_path):
@@ -29,10 +29,10 @@ def load_data(file_path):
 if __name__ == "__main__":
     df = load_data("data_raw/data.csv")
     print(df.head())
-` ` ` 
+```
 
 ### Ejemplo de main_pipeline.py
-` ` `
+```
 from scripts import import_data, clean_data, feature_engineering, export_data
 import pandas as pd
 
@@ -51,21 +51,21 @@ df_final = feature_engineering.add_features(df_clean)
 export_data.save_final_data(df_final, "data_cleaned/entregas_ba_ready.csv")
 
 print("✅ Pipeline ejecutado con éxito. Datos listos para análisis.")
-` ` ` 
+```
 
 
 ## Ejemplo de Instalación y Uso con Python
 Con un proyecto terminado...
 
 1. Instalar dependencias
-` ` ` 
+```
 pip install -r requirements.txt
-` ` `
+```
 
 2.Ejecutar el pipeline completo
-` ` ` 
+```
 python main_pipeline.py
-` ` `
+```
 
 ## Salida Esperada
 - data_cleaned/ ➔ Contiene los datos procesados y listos para análisis.
